@@ -92,7 +92,7 @@ export const DependentPropsMixin = <T extends Constructor<LitElement>>(
 
       for (const propName of _changedProps.keys()) {
         const dependencyProp = this._parsedWhen[propName as string];
-        if (!dependencyProp) return;
+        if (!dependencyProp) continue;
         dependencyProp.linked.forEach((linkedProp) => {
           // @ts-ignore
           this[linkedProp.propName] =

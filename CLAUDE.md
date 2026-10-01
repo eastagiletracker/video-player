@@ -126,9 +126,6 @@ All live in the code today; none are fixed.
   removing. Separately, `handleKeydown` is passed unbound, so `this` is the
   player element — the `{ keyboard: true, once: true }` meta never reaches the
   bus and keyboard commands can pend like any other.
-- **`DependentPropsMixin.updated()` uses `return` where it means `continue`** —
-  if the first changed property is not a declared dependency, the rest are
-  skipped for that update.
 - **Two classes are both named `SubtitlesButton`** — `buttons/Settings.ts`
   (registers `video-settings-button`) and `buttons/Subtitles.ts` (registers
   `video-subtitles-button`). The custom-elements analyzer resolves tag names by
